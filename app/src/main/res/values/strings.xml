@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">EcoShop</string>
+
+    <string name="logo_name">ECOshop</string>
+    <string name="welcome">Welcome back</string>
+    <string name="lorem">A Lorem Ipsum text generator is specifically designed to generate a dummy text or placeholder text.</string>
+    <string name="lorem2">A Lorem Ipsum text generator is specifically designed ...</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="title_home">Home</string>
+    <string name="title_profile">Profile</string>
+    <string name="sort">sorting:</string>
+    <string name="asc">Ascending</string>
+    <string name="desc">Descending</string>
+    <string name="clothes">Clothes</string>
+    <string name="pro_detail">Product details</string>
+    <string name="add_card">Add to card</string>
+    <string name="shopping_cart">Shopping Cart</string>
+    <string name="name">Name</string>
+    <string name="price">Price</string>
+    <string name="price2">Price: $</string>
+    <string name="total">Total</string>
+    <string name="cash">cash</string>
+    <string name="loan">Loan</string>
+    <string name="total_amount">Total Amount:</string>
+    <string name="proceed">Proceed to Check Out</string>
+    <string name="payments">Payments</string>
+    <string name="card_num">Card Number</string>
+    <string name="cvv2">CVV2</string>
+    <string name="year">Year</string>
+    <string name="month">Month</string>
+    <string name="epass">E-Pass</string>
+    <string name="cancel">Cancel</string>
+    <string name="check_out">Check Out</string>
+    <string name="success_payment">your payment is successful</string>
+    <string name="card_num_sm">card number:</string>
+    <string name="track_code">Tracking Code:</string>
+    <string name="comp_transaction">Complete transaction</string>
+    <string name="add_product">Add Product</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="category">Category</string>
+    <string name="category2">Category:</string>
+    <string name="img_url">Image URL</string>
+    <string name="product_register">Your product has been successfully registered</string>
+
+</resources>
