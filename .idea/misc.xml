@@ -22,11 +22,12 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/EcoShop/app/src/main/res/drawable/ic_star_border.xml" value="0.179" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EcoShop/app/src/main/res/drawable/ic_up.xml" value="0.179" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EcoShop/app/src/main/res/layout/activity_login.xml" value="0.25" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/EcoShop/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/EcoShop/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EcoShop/app/src/main/res/layout/add_product.xml" value="0.33" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/EcoShop/app/src/main/res/layout/dialog_product_detail.xml" value="0.2" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/EcoShop/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/EcoShop/app/src/main/res/layout/dialog_product_detail.xml" value="0.22" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/EcoShop/app/src/main/res/layout/fragment_home.xml" value="0.67" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EcoShop/app/src/main/res/layout/fragment_profile.xml" value="0.196875" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/EcoShop/app/src/main/res/layout/fragment_shopping_cart.xml" value="0.346875" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EcoShop/app/src/main/res/layout/item_product.xml" value="0.33" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EcoShop/app/src/main/res/layout/payment.xml" value="0.22" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EcoShop/app/src/main/res/layout/payment_dialog.xml" value="0.25" />

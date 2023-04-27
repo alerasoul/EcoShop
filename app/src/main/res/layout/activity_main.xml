@@ -78,6 +78,7 @@
         android:backgroundTint="@color/primary"
         android:src="@drawable/ic_plus"
         android:translationZ="1dp"
+        app:backgroundTint="@color/gray_white3"
         app:layout_constraintBottom_toTopOf="@+id/nav_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

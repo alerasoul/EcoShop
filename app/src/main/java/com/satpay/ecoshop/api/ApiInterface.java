@@ -42,7 +42,7 @@ public interface ApiInterface {
     );
 
     @GET("products")
-    Call<List<String>> sortProducts(
+    Call<List<Product>> sortProducts(
             @Query("sort") String sort
     );
 

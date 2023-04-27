@@ -2,8 +2,9 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="150dp"
-    android:layout_height="wrap_content"
+    android:layout_width="170dp"
+    android:layout_margin="4dp"
+    android:layout_height="290dp"
     app:cardCornerRadius="10dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -28,36 +29,37 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/box_clothes"
-            android:layout_width="50dp"
-            android:layout_height="20dp"
+            android:id="@+id/box_category"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/back_orange"
             android:text="@string/clothes"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="10sp"
+            app:layout_constraintEnd_toStartOf="@+id/img_star1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
         <ImageView
-            android:id="@+id/img_star1"
+            android:id="@+id/img_star5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_star_border"
-            app:layout_constraintBottom_toBottomOf="@+id/box_clothes"
+            app:layout_constraintBottom_toBottomOf="@+id/box_category"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/box_clothes" />
+            app:layout_constraintTop_toTopOf="@+id/box_category" />
 
         <ImageView
-            android:id="@+id/img_star2"
+            android:id="@+id/img_star4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="2dp"
             android:src="@drawable/ic_star_border"
-            app:layout_constraintBottom_toBottomOf="@+id/box_clothes"
-            app:layout_constraintEnd_toStartOf="@+id/img_star1"
-            app:layout_constraintTop_toTopOf="@+id/box_clothes" />
+            app:layout_constraintBottom_toBottomOf="@+id/box_category"
+            app:layout_constraintEnd_toStartOf="@+id/img_star5"
+            app:layout_constraintTop_toTopOf="@+id/box_category" />
 
         <ImageView
             android:id="@+id/img_star3"
@@ -65,29 +67,29 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="2dp"
             android:src="@drawable/ic_star_border"
-            app:layout_constraintBottom_toBottomOf="@+id/box_clothes"
-            app:layout_constraintEnd_toStartOf="@+id/img_star2"
-            app:layout_constraintTop_toTopOf="@+id/box_clothes" />
-
-        <ImageView
-            android:id="@+id/img_star4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="2dp"
-            android:src="@drawable/ic_star_fill"
-            app:layout_constraintBottom_toBottomOf="@+id/box_clothes"
-            app:layout_constraintEnd_toStartOf="@+id/img_star3"
-            app:layout_constraintTop_toTopOf="@+id/box_clothes" />
-
-        <ImageView
-            android:id="@+id/img_star5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="2dp"
-            android:src="@drawable/ic_star_fill"
-            app:layout_constraintBottom_toBottomOf="@+id/box_clothes"
+            app:layout_constraintBottom_toBottomOf="@+id/box_category"
             app:layout_constraintEnd_toStartOf="@+id/img_star4"
-            app:layout_constraintTop_toTopOf="@+id/box_clothes" />
+            app:layout_constraintTop_toTopOf="@+id/box_category" />
+
+        <ImageView
+            android:id="@+id/img_star2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:src="@drawable/ic_star_fill"
+            app:layout_constraintBottom_toBottomOf="@+id/box_category"
+            app:layout_constraintEnd_toStartOf="@+id/img_star3"
+            app:layout_constraintTop_toTopOf="@+id/box_category" />
+
+        <ImageView
+            android:id="@+id/img_star1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:src="@drawable/ic_star_fill"
+            app:layout_constraintBottom_toBottomOf="@+id/box_category"
+            app:layout_constraintEnd_toStartOf="@+id/img_star2"
+            app:layout_constraintTop_toTopOf="@+id/box_category" />
 
         <TextView
             android:id="@+id/txt_name"
@@ -98,8 +100,8 @@
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/box_clothes"
-            tools:text="Nike Triple Black Air Force 1 '07 sneakers" />
+            app:layout_constraintTop_toBottomOf="@+id/box_category"
+            tools:text="Ne Black Air Force 1 '07 siple Black Air Force 1 '07 sneakers" />
 
         <TextView
             android:id="@+id/txt_desc"
