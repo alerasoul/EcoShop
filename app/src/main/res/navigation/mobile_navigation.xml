@@ -9,12 +9,21 @@
         android:id="@+id/navigation_home"
         android:name="com.satpay.ecoshop.fragment.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_shopping_cart"
+            app:destination="@id/navigation_shopping_cart" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.satpay.ecoshop.fragment.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/navigation_shopping_cart"
+        android:name="com.satpay.ecoshop.fragment.ShoppingCartFragment"
+        android:label="@string/title_shopping"
+        tools:layout="@layout/fragment_shopping_cart" />
 
 </navigation>

@@ -1,19 +1,11 @@
 package com.satpay.ecoshop.fragment;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
 import android.graphics.drawable.Drawable;
-import android.media.Image;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.core.content.ContextCompat;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,7 +15,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.satpay.ecoshop.R;
+import com.satpay.ecoshop.ShoppingActivity;
 import com.satpay.ecoshop.adapter.ProductAdapter;
 import com.satpay.ecoshop.api.RetrofitClient;
 import com.satpay.ecoshop.model.Product;
@@ -78,6 +78,14 @@ public class HomeFragment extends Fragment {
             txtPrice.setText(String.format("%s", p.getPrice()));
             txtScore.setText(String.format("%s", p.getRating().getRate()));
             Picasso.get().load(p.getImage()).into(imgProduct);
+            constAddCard.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(getActivity(), ShoppingActivity.class);
+                    intent.putExtra("product_id", p.getId());
+                    startActivity(intent);
+                }
+            });
 
             dialog.show();
         };
@@ -139,7 +147,7 @@ public class HomeFragment extends Fragment {
 
             @Override
             public void onFailure(@NonNull Call<List<Product>> call, @NonNull Throwable t) {
-                Toast.makeText(getContext(), getResources().getString(R.string.net_error), Toast.LENGTH_LONG).show();
+                Toast.makeText(requireActivity(), requireActivity().getResources().getString(R.string.net_error), Toast.LENGTH_LONG).show();
                 Log.e("HomeFragment", t.toString());
             }
         });
@@ -164,7 +172,7 @@ public class HomeFragment extends Fragment {
 
             @Override
             public void onFailure(@NonNull Call<List<Product>> call, @NonNull Throwable t) {
-                Toast.makeText(getContext(), getResources().getString(R.string.net_error), Toast.LENGTH_LONG).show();
+                Toast.makeText(requireActivity(), requireActivity().getResources().getString(R.string.net_error), Toast.LENGTH_LONG).show();
                 Log.e("HomeFragment", t.toString());
             }
         });
