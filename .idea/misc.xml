@@ -23,6 +23,7 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/EcoShop/app/src/main/res/drawable/ic_up.xml" value="0.179" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EcoShop/app/src/main/res/drawable/progress.xml" value="0.198" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EcoShop/app/src/main/res/drawable/progressbar.xml" value="0.198" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/EcoShop/app/src/main/res/layout/activity_add_product.xml" value="0.33" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EcoShop/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EcoShop/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EcoShop/app/src/main/res/layout/activity_shopping.xml" value="0.35104166666666664" />
@@ -34,7 +35,7 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/EcoShop/app/src/main/res/layout/fragment_shopping_cart.xml" value="0.25" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EcoShop/app/src/main/res/layout/item_product.xml" value="0.33" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EcoShop/app/src/main/res/layout/payment.xml" value="0.22" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/EcoShop/app/src/main/res/layout/payment_dialog.xml" value="0.25" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/EcoShop/app/src/main/res/layout/payment_dialog.xml" value="0.33" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EcoShop/app/src/main/res/layout/product_register_dialog.xml" value="0.33" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EcoShop/app/src/main/res/layout/shopping_card.xml" value="0.25" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EcoShop/app/src/main/res/menu/bottom_nav_menu.xml" value="0.346875" />

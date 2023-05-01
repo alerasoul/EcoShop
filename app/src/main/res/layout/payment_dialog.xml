@@ -116,11 +116,11 @@
             app:layout_constraintBottom_toBottomOf="@+id/txt_track_code"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/txt_track_code"
-            tools:text="12345678" />
+            android:text="12345678" />
 
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_proceed"
+            android:id="@+id/btn_complete"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"

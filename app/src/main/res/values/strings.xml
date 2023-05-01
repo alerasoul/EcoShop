@@ -53,5 +53,7 @@
     <string name="months12">12 months</string>
     <string name="intersts">intersts</string>
     <string name="check_pro_num">The number cannot be less than 1</string>
+    <string name="fill_fields">Fill in all fields</string>
+    <string name="not_correct_card_num">The card number is not entered correctly</string>
 
 </resources>

@@ -1,9 +1,6 @@
 package com.satpay.ecoshop.fragment;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +9,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.satpay.ecoshop.R;
 import com.satpay.ecoshop.api.RetrofitClient;
@@ -77,11 +77,23 @@ public class ShoppingCartFragment extends Fragment {
             btnLoan.setBackgroundColor(getResources().getColor(R.color.gray_white2));
             btnLoan.setTextColor(getResources().getColor(R.color.black));
         });
+
         btnLoan.setOnClickListener(view13 -> {
             btnLoan.setBackgroundResource(R.drawable.back_button_cash);
             btnLoan.setTextColor(getResources().getColor(R.color.white));
             btnCash.setBackgroundColor(getResources().getColor(R.color.gray_white2));
             btnCash.setTextColor(getResources().getColor(R.color.black));
+        });
+
+        btnProceed.setOnClickListener(view14 -> {
+            FragmentTransaction transaction = requireActivity().getSupportFragmentManager().beginTransaction();
+            PaymentFragment paymentFragment = new PaymentFragment();
+            Bundle bundle = new Bundle();
+            bundle.putDouble("total_price", Double.parseDouble(String.valueOf(txtTotal.getText()).substring(1)));
+            paymentFragment.setArguments(bundle);
+            transaction.replace(R.id.frameLayout_main, paymentFragment);
+            transaction.addToBackStack(null);
+            transaction.commit();
         });
         return view;
     }
@@ -106,7 +118,7 @@ public class ShoppingCartFragment extends Fragment {
             public void onFailure(Call<Product> call, Throwable t) {
                 if (isAdded())
                     Toast.makeText(requireActivity(), requireActivity().getResources().getString(R.string.net_error), Toast.LENGTH_LONG).show();
-                Log.e("PaymentFragment", t.toString());
+                Log.e("ShoppingCartFragment", t.toString());
             }
         });
 
