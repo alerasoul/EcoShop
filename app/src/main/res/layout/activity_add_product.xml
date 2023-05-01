@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".AddProductActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -74,63 +75,34 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/view_actionbar" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_top"
-            android:layout_width="match_parent"
-            android:layout_height="?actionBarSize"
+        <TextView
+            android:id="@+id/txt_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="30dp"
             android:layout_marginTop="40dp"
-            app:cardCornerRadius="10dp"
+            android:lineHeight="14sp"
+            android:text="@string/lorem"
+            android:textColor="@color/light_gray"
+            android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view_actionbar" />
 
-
-        <TextView
-            android:id="@+id/txt_total_amount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/total_amount"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:translationZ="2dp"
-            app:layout_constraintBottom_toBottomOf="@+id/card_top"
-            app:layout_constraintEnd_toStartOf="@+id/txt_total_amount_price"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintHorizontal_chainStyle="packed"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/card_top" />
-
-        <TextView
-            android:id="@+id/txt_total_amount_price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="14dp"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:translationZ="2dp"
-            app:layout_constraintBottom_toBottomOf="@+id/card_top"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintHorizontal_chainStyle="packed"
-            app:layout_constraintStart_toEndOf="@+id/txt_total_amount"
-            app:layout_constraintTop_toTopOf="@+id/card_top"
-            tools:text="$1.620" />
-
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="30dp"
-            android:layout_marginTop="10dp"
-            app:cardBackgroundColor="@color/gray_white3"
+            android:layout_marginTop="40dp"
             app:cardCornerRadius="10dp"
-            app:layout_constraintTop_toBottomOf="@+id/card_top">
+            app:contentPaddingBottom="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_desc">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingBottom="30dp">
+                android:layout_height="match_parent">
 
                 <View
                     android:id="@+id/view_back"
@@ -140,42 +112,37 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/txt_title_detail"
+                    android:id="@+id/txt_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="@string/payments"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/add_product"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="@+id/view_back"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/view_back" />
 
-
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/lay_card_num"
+                    android:id="@+id/lay_title"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="16dp"
-                    android:layout_marginTop="40dp"
-                    android:textSize="12sp"
+                    android:layout_marginTop="20dp"
                     app:boxCornerRadiusBottomEnd="3dp"
                     app:boxCornerRadiusBottomStart="3dp"
                     app:boxCornerRadiusTopEnd="3dp"
                     app:boxCornerRadiusTopStart="3dp"
                     app:boxStrokeColor="@color/light_gray3"
-                    app:layout_constraintTop_toBottomOf="@+id/view_back"
-                    app:placeholderText="1234-5678-9123-4567"
-                    app:placeholderTextColor="@color/gray_white2">
+                    app:layout_constraintTop_toBottomOf="@+id/view_back">
 
                     <EditText
-                        android:id="@+id/edt_card_num"
+                        android:id="@+id/edt_title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@null"
-                        android:hint="@string/card_num"
-                        android:inputType="number"
+                        android:hint="@string/title"
                         android:textColor="@color/black"
                         android:textColorHint="@color/black"
                         android:textSize="12sp"
@@ -183,27 +150,26 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/lay_cvv2"
+                    android:id="@+id/lay_desc"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="16dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="20dp"
                     app:boxCornerRadiusBottomEnd="3dp"
                     app:boxCornerRadiusBottomStart="3dp"
                     app:boxCornerRadiusTopEnd="3dp"
                     app:boxCornerRadiusTopStart="3dp"
                     app:boxStrokeColor="@color/light_gray3"
-                    app:layout_constraintTop_toBottomOf="@+id/lay_card_num"
-                    app:placeholderTextColor="@color/gray_white2">
+                    app:layout_constraintTop_toBottomOf="@+id/lay_title">
 
                     <EditText
-                        android:id="@+id/edt_cvv2"
+                        android:id="@+id/edt_desc"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@null"
-                        android:hint="@string/cvv2"
-                        android:inputType="number"
+                        android:hint="@string/description"
+                        android:lines="2"
                         android:textColor="@color/black"
                         android:textColorHint="@color/black"
                         android:textSize="12sp"
@@ -211,130 +177,118 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/lay_year"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="30dp"
-                    app:boxCornerRadiusBottomEnd="3dp"
-                    app:boxCornerRadiusBottomStart="3dp"
-                    app:boxCornerRadiusTopEnd="3dp"
-                    app:boxCornerRadiusTopStart="3dp"
-                    app:boxStrokeColor="@color/light_gray3"
-                    app:layout_constraintEnd_toStartOf="@+id/lay_month"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/lay_cvv2"
-                    app:placeholderTextColor="@color/gray_white2">
-
-                    <EditText
-                        android:id="@+id/edt_year"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@null"
-                        android:hint="@string/year"
-                        android:inputType="number"
-                        android:textColor="@color/black"
-                        android:textColorHint="@color/black"
-                        android:textSize="12sp"
-                        app:hintTextColor="@color/black" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/lay_month"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginEnd="16dp"
-                    app:boxCornerRadiusBottomEnd="3dp"
-                    app:boxCornerRadiusBottomStart="3dp"
-                    app:boxCornerRadiusTopEnd="3dp"
-                    app:boxCornerRadiusTopStart="3dp"
-                    app:boxStrokeColor="@color/light_gray3"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/lay_year"
-                    app:layout_constraintTop_toBottomOf="@+id/lay_cvv2"
-                    app:placeholderTextColor="@color/gray_white2">
-
-                    <EditText
-                        android:id="@+id/edt_month"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@null"
-                        android:hint="@string/month"
-                        android:inputType="number"
-                        android:textColor="@color/black"
-                        android:textColorHint="@color/black"
-                        android:textSize="12sp"
-                        app:hintTextColor="@color/black" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/lay_epass"
+                    android:id="@+id/lay_category"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="16dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="20dp"
                     app:boxCornerRadiusBottomEnd="3dp"
                     app:boxCornerRadiusBottomStart="3dp"
                     app:boxCornerRadiusTopEnd="3dp"
                     app:boxCornerRadiusTopStart="3dp"
                     app:boxStrokeColor="@color/light_gray3"
-                    app:layout_constraintTop_toBottomOf="@+id/lay_year"
-                    app:placeholderTextColor="@color/gray_white2"
-                    tools:layout_editor_absoluteX="16dp">
+                    app:layout_constraintTop_toBottomOf="@+id/lay_desc">
 
                     <EditText
-                        android:id="@+id/edt_epass"
+                        android:id="@+id/edt_category"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@null"
-                        android:hint="@string/epass"
-                        android:inputType="number"
+                        android:hint="@string/category"
                         android:textColor="@color/black"
                         android:textColorHint="@color/black"
                         android:textSize="12sp"
                         app:hintTextColor="@color/black" />
                 </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lay_img_url"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="20dp"
+                    app:boxCornerRadiusBottomEnd="3dp"
+                    app:boxCornerRadiusBottomStart="3dp"
+                    app:boxCornerRadiusTopEnd="3dp"
+                    app:boxCornerRadiusTopStart="3dp"
+                    app:boxStrokeColor="@color/light_gray3"
+                    app:layout_constraintTop_toBottomOf="@+id/lay_category">
+
+                    <EditText
+                        android:id="@+id/edt_img_url"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/img_url"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="12sp"
+                        app:hintTextColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lay_price"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="20dp"
+                    app:boxCornerRadiusBottomEnd="3dp"
+                    app:boxCornerRadiusBottomStart="3dp"
+                    app:boxCornerRadiusTopEnd="3dp"
+                    app:boxCornerRadiusTopStart="3dp"
+                    app:boxStrokeColor="@color/light_gray3"
+                    app:layout_constraintTop_toBottomOf="@+id/lay_img_url">
+
+                    <EditText
+                        android:id="@+id/edt_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/price"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="12sp"
+                        app:hintTextColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_cancel"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="30dp"
                     android:background="@drawable/back_button_orange"
                     android:text="@string/cancel"
                     android:textAllCaps="false"
                     android:textColor="@color/orange2"
-                    app:layout_constraintEnd_toStartOf="@+id/btn_check_out"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_add"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/lay_epass" />
+                    app:layout_constraintTop_toBottomOf="@+id/lay_price" />
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_check_out"
+                    android:id="@+id/btn_add"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="30dp"
                     android:layout_marginEnd="16dp"
                     android:background="@drawable/back_button_orange_fill"
-                    android:text="@string/check_out"
+                    android:text="@string/add_product"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/btn_cancel"
-                    app:layout_constraintTop_toBottomOf="@+id/lay_epass" />
+                    app:layout_constraintTop_toBottomOf="@+id/lay_price" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

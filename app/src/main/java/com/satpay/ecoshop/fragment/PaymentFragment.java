@@ -54,9 +54,11 @@ public class PaymentFragment extends Fragment {
                     edtMonth.getText().toString().isEmpty() ||
                     edtEpass.getText().toString().isEmpty()) {
                 Toast.makeText(requireActivity(), requireActivity().getResources().getString(R.string.fill_fields), Toast.LENGTH_LONG).show();
-            } else if (edtCardNum.getText().length() < 12) {
-                Toast.makeText(requireActivity(), requireActivity().getResources().getString(R.string.not_correct_card_num), Toast.LENGTH_LONG).show();
-            } else {
+            }
+//            else if (edtCardNum.getText().length() < 12) {
+//                Toast.makeText(requireActivity(), requireActivity().getResources().getString(R.string.not_correct_card_num), Toast.LENGTH_LONG).show();
+//            }
+            else {
                 final Dialog dialog = new Dialog(getContext());
                 dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                 dialog.setCancelable(false);
@@ -80,7 +82,7 @@ public class PaymentFragment extends Fragment {
             }
         });
 
-        edtCardNum.addTextChangedListener(new TextWatcher() {
+        TextWatcher t = new TextWatcher() {
 
             private static final int TOTAL_SYMBOLS = 19;
             private static final int TOTAL_DIGITS = 16;
@@ -144,7 +146,9 @@ public class PaymentFragment extends Fragment {
                 }
                 return digits;
             }
-        });
+        };
+        edtCardNum.removeTextChangedListener(t);
+        edtCardNum.addTextChangedListener(t);
 
         return view;
     }

@@ -1,5 +1,6 @@
 package com.satpay.ecoshop.api;
 
+import com.satpay.ecoshop.model.AddProduct;
 import com.satpay.ecoshop.model.Login;
 import com.satpay.ecoshop.model.LoginResponse;
 import com.satpay.ecoshop.model.Product;
@@ -38,7 +39,7 @@ public interface ApiInterface {
 
     @POST("products")
     Call<List<String>> addProduct(
-            @Body Product product
+            @Body AddProduct product
     );
 
     @GET("products")
